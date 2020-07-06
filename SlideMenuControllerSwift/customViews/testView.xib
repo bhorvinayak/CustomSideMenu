@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="4352" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="testView" customModule="SlideMenuControllerSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="iq2-4C-GXo"/>
+                <outlet property="menuBtn" destination="741-ue-9op" id="WeG-fc-qrY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="555" height="146"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="741-ue-9op">
+                    <rect key="frame" x="20" y="53" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="846-Zm-80c"/>
+                        <constraint firstAttribute="height" constant="40" id="KkL-Br-yiO"/>
+                    </constraints>
+                    <state key="normal" image="menu-2"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRc-qx-TGN">
+                    <rect key="frame" x="445" y="58" width="30" height="30"/>
+                    <state key="normal" image="notification"/>
+                    <connections>
+                        <action selector="notifictnBtnCliked:" destination="-1" eventType="touchUpInside" id="FuM-RN-Trv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bq-69-cc5">
+                    <rect key="frame" x="480" y="58" width="30" height="30"/>
+                    <state key="normal" image="shopping-cart"/>
+                    <connections>
+                        <action selector="cartBtnCliked:" destination="-1" eventType="touchUpInside" id="jN1-h7-YZ8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWz-PE-vg2">
+                    <rect key="frame" x="515" y="58" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="Dp2-Jv-ExF"/>
+                        <constraint firstAttribute="height" constant="30" id="FhL-Oa-nic"/>
+                    </constraints>
+                    <state key="normal" image="message"/>
+                    <connections>
+                        <action selector="mesgBtnCliked:" destination="-1" eventType="touchUpInside" id="sfZ-BS-jxC"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-2" translatesAutoresizingMaskIntoConstraints="NO" id="2LB-Ts-rwi">
+                    <rect key="frame" x="68" y="53" width="337" height="40"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="2LB-Ts-rwi" firstAttribute="bottom" secondItem="741-ue-9op" secondAttribute="bottom" id="5zg-gw-doT"/>
+                <constraint firstItem="cWz-PE-vg2" firstAttribute="width" secondItem="TRc-qx-TGN" secondAttribute="width" id="6tn-Vt-xuU"/>
+                <constraint firstItem="2LB-Ts-rwi" firstAttribute="leading" secondItem="741-ue-9op" secondAttribute="trailing" constant="8" id="80p-h9-ASt"/>
+                <constraint firstItem="cWz-PE-vg2" firstAttribute="leading" secondItem="5Bq-69-cc5" secondAttribute="trailing" constant="5" id="82i-ZD-zCK"/>
+                <constraint firstItem="TRc-qx-TGN" firstAttribute="top" secondItem="cWz-PE-vg2" secondAttribute="top" id="9Jn-Ne-Gog"/>
+                <constraint firstItem="741-ue-9op" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="EBp-Ef-5eY"/>
+                <constraint firstItem="5Bq-69-cc5" firstAttribute="top" secondItem="cWz-PE-vg2" secondAttribute="top" id="I2W-of-un4"/>
+                <constraint firstItem="5Bq-69-cc5" firstAttribute="leading" secondItem="TRc-qx-TGN" secondAttribute="trailing" constant="5" id="Jps-JZ-zTQ"/>
+                <constraint firstItem="TRc-qx-TGN" firstAttribute="bottom" secondItem="cWz-PE-vg2" secondAttribute="bottom" id="Vkz-NN-ce4"/>
+                <constraint firstItem="2LB-Ts-rwi" firstAttribute="top" secondItem="741-ue-9op" secondAttribute="top" id="Wpj-XX-zNd"/>
+                <constraint firstItem="741-ue-9op" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="X0B-H6-Ix3"/>
+                <constraint firstItem="5Bq-69-cc5" firstAttribute="width" secondItem="TRc-qx-TGN" secondAttribute="width" id="Ynq-6w-0Zb"/>
+                <constraint firstItem="TRc-qx-TGN" firstAttribute="leading" secondItem="2LB-Ts-rwi" secondAttribute="trailing" constant="40" id="aSN-9i-nhh"/>
+                <constraint firstItem="5Bq-69-cc5" firstAttribute="bottom" secondItem="cWz-PE-vg2" secondAttribute="bottom" id="kuv-ZI-pkF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cWz-PE-vg2" secondAttribute="trailing" constant="10" id="ma2-Bd-Gjm"/>
+                <constraint firstItem="cWz-PE-vg2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="p11-le-zj6"/>
+                <constraint firstItem="2LB-Ts-rwi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qaW-Hr-aaa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-38.405797101449281" y="-494.83695652173918"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="images-2" width="469" height="107"/>
+        <image name="menu-2" width="24" height="24"/>
+        <image name="message" width="24" height="24"/>
+        <image name="notification" width="24" height="24"/>
+        <image name="shopping-cart" width="24" height="24"/>
+    </resources>
+</document>
